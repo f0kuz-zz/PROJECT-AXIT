@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="AXIT-PROJECT">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#2F3BA2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="styles/1-tools/normalize.css">
+  <link rel="stylesheet" href="styles/1-tools/animate.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Fonts -->
+  <!--<link href='https://fonts.googleapis.com/css?family=Raleway|Raleway:300|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>-->
+
+</head>
+<body>
+<!-- Add your site or app content here -->
+<div class="boss-container">
+  <header>
+    <div class="header-top-bar">
+      <h2><a href="#"><img class="logo-top-axit" src="images/logo-header-top.png" alt="Logo AXIT"></a></h2>
+      <nav class="header-nav-bar">
+        <div class="hamburger" href="#">
+          <div class="hamburger-click">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <ul class="header-nav-ul menu">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-main-area">
+      <div class="header-left-bar">
+        <h2><img src="images/logo-header-area.png" alt="AXIT"></h2>
+        <h3>MODERN AXURE TEMPLATE FOR BEAUTIFUL PROTOTYPES</h3><br>
+        <span class="header-divider"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor
+          sit amet lacus accumsan et viverra justo commodo.</p>
+        <button class="download">Download</button>
+      </div>
+      <div class="header-right-bar">
+        <form class="header-form" name="hform" action="#" onsubmit="return Validate()">
+          <div class="form-title"><h3>Try Your <span>free</span> Trial Today</h3></div>
+          <div class="form-main">
+            <div class="form-group">
+              <input type="text" class="header-form-input" name="username" placeholder="Name">
+              <div id="username-error" class="header-errors"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="header-form-input" name="email" placeholder="Email">
+              <div id="email-error" class="header-errors"></div>
+            </div>
+            <div class="form-group">
+              <input type="password" class="header-form-input" name="password" placeholder="Password">
+              <div id="password-error" class="header-errors"></div>
+            </div>
+          </div>
+          <button class="form-started" type="submit">Get Started</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-body">
+    <div class="social-aside-wrap">
+      <div class="social-text">
+        <p class="social-title">Social Media</p>
+        <p class="social-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aenean euismod bibendum laoreet.</p>
+      </div>
+      <div class="social-icon-wrap">
+        <div class="social-icon-area">
+          <div class="social-icon-_ul">
+            <div class="social-icon-_li"><a href="#"><img src="images/facebook-bar.png" alt="facebook" width="" height=""></a></div>
+            <div class="social-icon-_li"><a href="#"><img src="images/twitter-bar.png" alt="twitter" width="" height=""></a></div>
+            <div class="social-icon-_li"><a href="#"><img src="images/gplus-bar.png" alt="gplus" width="" height=""></a></div>
+            <div class="social-icon-_li"><a href="#"><img src="images/pinterest-bar.png" alt="pinterest" width="" height=""></a></div>
+            <div class="social-icon-_li"><a href="#"><img src="images/instagram-bar.png" alt="instagram" width="" height=""></a></div>
+            <div class="social-icon-_li"><a href="#"><img src="images/rsa-bar.png" alt="rsa" width="" height=""></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="features-panel">
+      <div class="features-wrap">
+        <article class="feature-columns feature-columns-1">
+          <nav class="feature-tab">
+            <a href="#"><div class="tab">TAB 1</div></a>
+            <a href="#"><div class="tab">TAB 2</div></a>
+            <a href="#"><div class="tab">TAB 3</div></a>
+          </nav>
+          <div class="feature-text feature-text-left">
+            <h4 class="h4-tabs">Tabs with soft transitioning effect</h4>
+            <p class="p-first">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+              justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+              penatibus et magnis dis parturient montes.
+            </p>
+            <p class="p-second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet.
+            </p>
+            <button class="feature-download">Download</button>
+          </div>
+          <div class="feature-image feature-image-1">
+            <figure class="figure-end">
+              <img src="images/axit-city.png" alt="axit">
+            </figure>
+          </div>
+        </article>
+        <article class="feature-columns feature-columns-2">
+          <div class="feature-image feature-image-2">
+            <figure class="figure-start">
+              <img src="images/blur-city.jpg" alt="panorama">
+            </figure>
+          </div>
+          <div class="feature-text feature-text-right">
+            <h4>Sub list section</h4>
+            <div class="feature-divider"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+              dolor sit amet lacus accumsan et viverra justo commodo.</p>
+            <div class="text-title-box">
+              <div class="text-title-double">
+                <div class="title-img">
+                  <img src="images/cloud-ico.png" alt="cloud">
+                </div>
+                <div class="title-content">
+                  <p>Title</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                </div>
+              </div>
+              <div class="text-title-double">
+                <div class="title-img">
+                  <img src="images/cloud-ico.png" alt="cloud">
+                </div>
+                <div class="title-content">
+                  <p>Title</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="feature-columns feature-columns-3">
+          <div class="feature-text feature-text-left">
+            <h4>Standard Picture Section</h4>
+            <div class="feature-divider"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+              justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+              penatibus et magnis dis parturient montes.
+            </p>
+            <p class="p-second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+              bibendum laoreet.
+            </p>
+          </div>
+          <div class="feature-image feature-image-3">
+            <figure class="figure-end">
+              <img src="images/panorama.jpg" alt="panorama">
+            </figure>
+          </div>
+        </article>
+        <article class="feature-why-flex">
+          <div class="why-top">
+            <div class="why-top-flex">
+              <h3>Why this is awesome</h3>
+              <div class="feature-divider"></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="why-bottom">
+            <div class="why-bottom-flex">
+              <div class="why-column">
+                <div class="why-column-flex">
+                  <div class="column-img"><img src="images/thoughtful-ico.png" alt="think"></div>
+                  <p>Thoughtful Design</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aenean euismod bibendum laoreet. Proin gravida
+                    dolor sit amet lacus accumsan et viverra.</p>
+                </div>
+              </div>
+              <div class="why-column">
+                <div class="why-column-flex">
+                  <div class="column-img"><img src="images/keyboard-ico.png" alt="key"></div>
+                  <p>Well Crafted</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aenean euismod bibendum laoreet. Proin gravida
+                    dolor sit amet lacus accumsan et viverra.</p>
+                </div>
+              </div>
+              <div class="why-column">
+                <div class="why-column-flex">
+                  <div class="column-img"><img src="images/thunderbolt-ico.png" alt="bolt"></div>
+                  <p>Easy to Customize</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Aenean euismod bibendum laoreet. Proin gravida
+                    dolor sit amet lacus accumsan et viverra.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="feature-pricing">
+          <div class="pricing-top">
+            <div class="pricing-top-flex">
+              <h3>Pricing options</h3>
+              <div class="feature-divider"></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="pricing-bottom">
+            <div class="pricing-bottom-flex">
+              <div class="pricing-column">
+                <div class="pricing-column-flex">
+                  <div class="pricing-level">
+                    <p>Basic</p>
+                  </div>
+                  <div class="pricing-price anim-price1">
+                    <p><span class="dollar">$</span>0</p>
+                    <p>Free for Life</p>
+                  </div>
+                  <div class="pricing-recomend recmnd1">For better work</div>
+                  <div class="pricing-option">1 gb of space</div>
+                  <div class="pricing-option">10 gb of space</div>
+                  <div class="pricing-option">3 websites</div>
+                  <div class="pricing-option">Basic customization</div>
+                  <div class="pricing-option">Wordpress integration</div>
+                  <div class="pricing-option">Email support</div>
+                </div>
+              </div>
+              <div class="pricing-column pricing-column-center">
+                <div class="pricing-column-flex">
+                  <div class="pricing-level">
+                    <p>Professional</p>
+                  </div>
+                  <div class="pricing-price anim-price2">
+                    <p><span class="dollar">$</span>19</p>
+                    <p>Monthly Payment</p>
+                  </div>
+                  <div class="pricing-recomend recmnd2">Our most popular</div>
+                  <div class="pricing-option">5 gb of space</div>
+                  <div class="pricing-option">50 gb of space</div>
+                  <div class="pricing-option">12 websites</div>
+                  <div class="pricing-option">Advanced customization</div>
+                  <div class="pricing-option">Wordpress integration</div>
+                  <div class="pricing-option">Email support</div>
+                </div>
+              </div>
+              <div class="pricing-column">
+                <div class="pricing-column-flex">
+                  <div class="pricing-level">
+                    <p>Enterprise</p>
+                  </div>
+                  <div class="pricing-price anim-price3">
+                    <p><span class="dollar">$</span>70</p>
+                    <p>Monthly Payment</p>
+                  </div>
+                  <div class="pricing-recomend recmnd3">Total Expand</div>
+                  <div class="pricing-option">Unlimited space</div>
+                  <div class="pricing-option">Unlimited bandwidth</div>
+                  <div class="pricing-option">100 websites</div>
+                  <div class="pricing-option">Advanced customization</div>
+                  <div class="pricing-option">Wordpress integration</div>
+                  <div class="pricing-option">Email support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="feature-customers">
+          <div class="customers-top-flex">
+            <h3>What our customers are saying</h3>
+            <div class="feature-divider"></div>
+            <p class="custom-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="customers-bottom">
+            <div class="customers-bottom-flex">
+              <div class="customers-column">
+                <div class="customers-column-flex">
+                  <div class="customers-testimonial">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Doloribus
+                    accusamus expedita repellat similique
+                    odio aspernatur ex, architecto eaque
+                    quo suscipit.</div>
+                  <div class="customers-info">
+                    <span class="author-pic"><img src="images/testimonial-photo.png" alt="what they say"></span>
+                    <p>Jeremy H.</p>
+                    <p>Manager</p>
+                  </div>
+                </div>
+                <div class="customers-column-flex">
+                  <div class="customers-testimonial">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Doloribus
+                    accusamus expedita repellat similique
+                    odio aspernatur ex, architecto eaque
+                    quo suscipit.</div>
+                  <div class="customers-info">
+                    <span class="author-pic"><img src="images/testimonial-photo.png" alt="what they say"></span>
+                    <p>John S.</p>
+                    <p>Freelancer</p>
+                  </div>
+                </div>
+                <div class="customers-column-flex">
+                  <div class="customers-testimonial">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Doloribus
+                    accusamus expedita repellat similique
+                    odio aspernatur ex, architecto eaque
+                    quo suscipit.</div>
+                  <div class="customers-info">
+                    <span class="author-pic"><img src="images/testimonial-photo.png" alt="what they say"></span>
+                    <p>Bryan B.</p>
+                    <p>Developer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="feature-stylish-flex">
+          <h3>Stylish Axure Design</h3>
+          <div class="feature-divider"></div>
+          <p>Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</p>
+          <button class="download">Download</button>
+        </article>
+        <article class="feature-form">
+          <div class="form-top-flex">
+            <h3>Contact us</h3>
+            <div class="feature-divider"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="form-bottom">
+            <div class="form-bottom-flex">
+              <form id="main-form" class="send-form" action="">
+                <fieldset class="form-area">
+                  <div class="fieldset-div">
+                    <div class="left-inputs">
+                      <div class="form-name">
+                        <input id="idName" type="text" placeholder="Name">
+                      </div>
+                      <div class="form-email">
+                        <input id="idEmail" type="email" placeholder="Email">
+                      </div>
+                      <div class="form-subject">
+                        <input id="idSubject" type="text" placeholder="Subject">
+                      </div>
+                    </div>
+                    <div class="right-inputs">
+                      <div class="form-message">
+                        <textarea id="idMessage" placeholder="Message"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="bottom-button-wrapper">
+                <button class="send-button">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <footer>
+          <div class="footer-icons">
+            <ul>
+              <li><a href="#"><img src="images/facebook-footer.png" alt="facebook"></a></li>
+              <li><a href="#"><img src="images/twitter-footer.png" alt="titter"></a></li>
+              <li><a href="#"><img src="images/pinterest-footer.png" alt="pinterest"></a></li>
+              <li><a href="#"><img src="images/instagram-footer.png" alt="instagram"></a></li>
+              <li><a href="#"><img src="images/undefined-footer.png" alt="undefined"></a></li>
+              <li><a href="#"><img src="images/rsa-footer.png" alt="rsa"></a></li>
+            </ul>
+          </div>
+          <p>2015 Axure Themes</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="scripts/jquery-3.0.0.min.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
