@@ -276,38 +276,74 @@ header {
   header {
     height: 698px; }
 
-  .header-top-bar h2 {
-    position: absolute;
-    padding-left: 30px;
-    -webkit-margin-before: 15px;
-    -webkit-margin-after: 0; }
+  .header-top-bar {
+    position: relative; }
+    .header-top-bar h2 {
+      position: absolute;
+      padding-left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0; }
 
   .header-nav-bar {
-    width: 100%; }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 72px; }
     .header-nav-bar .hamburger {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 15px; }
-      .header-nav-bar .hamburger .hamburger-click {
-        cursor: pointer; }
-        .header-nav-bar .hamburger .hamburger-click .line {
-          width: 50px;
-          margin-bottom: 7px;
-          border-top: 4px solid #ffffff; }
-          .header-nav-bar .hamburger .hamburger-click .line:last-child {
-            margin-bottom: 0; }
+      display: inline-block;
+      width: 50px;
+      height: 40px;
+      margin-right: 30px;
+      border: none;
+      border-top: 5px solid #ffffff;
+      background-color: transparent;
+      position: relative;
+      right: 0;
+      cursor: pointer;
+      transition: 0.3s transform linear; }
+      .header-nav-bar .hamburger::after, .header-nav-bar .hamburger::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-top: 5px solid #ffffff;
+        transform: translateY(10px); }
+      .header-nav-bar .hamburger::after {
+        transform: translateY(25px); }
+      .header-nav-bar .hamburger:focus::after {
+        transition: 0.3s transform linear;
+        transform: rotate(-90deg) translateX(-10px); }
+      .header-nav-bar .hamburger:focus {
+        transform: rotate(45deg) translateY(5px);
+        border: 0;
+        outline: none; }
+      .header-nav-bar .hamburger .hamburger-label {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap; }
 
   .header-nav-ul {
     width: 100%;
     height: 279px;
     overflow: hidden;
-    background: inherit;
+    padding-right: 0;
     text-align: center;
     line-height: 53px;
     -webkit-padding-start: 0;
     -moz-padding-start: 0;
+    background: inherit;
     z-index: 1; }
     .header-nav-ul li {
       display: block;
@@ -321,6 +357,7 @@ header {
   .menu {
     display: none;
     position: absolute;
+    top: 70px;
     z-index: 1; }
 
   .header-main-area {
@@ -494,8 +531,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  display: none; }
+  z-index: 9999; }
 
 .showed-for-tab1 {
   position: absolute;
@@ -568,7 +604,10 @@ header {
     .feature-columns .feature-tab {
       padding-left: 25px; }
     .feature-columns .feature-image-1 {
-      padding-right: 25px; } }
+      padding-right: 25px; }
+
+  .video-tab1 {
+    height: 494px; } }
 @media (min-width: 1101px) and (max-width: 1280px) {
   .feature-columns {
     padding: 0 25px; }
@@ -577,7 +616,10 @@ header {
     .feature-columns .feature-tab {
       padding-left: 25px; }
     .feature-columns .feature-image-1 {
-      padding-right: 25px; } }
+      padding-right: 25px; }
+
+  .video-tab1 {
+    height: 474px; } }
 @media (min-width: 1081px) and (max-width: 1100px) {
   .feature-columns {
     padding: 0 25px; }
@@ -590,6 +632,9 @@ header {
 
   .modal {
     margin-left: 0; }
+
+  .video-tab1 {
+    height: 494px; }
 
   p {
     font-size: 1.05em; } }
@@ -673,7 +718,8 @@ header {
     flex-direction: column-reverse;
     padding: 0 25px; }
     .feature-columns:first-child {
-      padding: 0 25px; }
+      padding: 0 25px;
+      height: 654px; }
 
   .modal {
     margin-left: 0; }

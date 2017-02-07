@@ -52,13 +52,9 @@
     <div class="header-top-bar">
       <h2><a href="#"><img class="logo-top-axit" src="images/logo-header-top.png" alt="Logo AXIT"></a></h2>
       <nav class="header-nav-bar">
-        <div class="hamburger" href="#">
-          <div class="hamburger-click">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-        </div>
+        <button  class="hamburger">
+          <span class="hamburger-label">Otwórz/zamknij menu</span>
+        </button>
         <ul class="header-nav-ul menu">
           <li><a href="#">Features</a></li>
           <li><a href="#">About</a></li>
@@ -78,7 +74,7 @@
         <button class="download">Download</button>
       </div>
       <div class="header-right-bar">
-        <form class="header-form" name="hform" action="#" onsubmit="return Validate()">
+        <form class="header-form" name="hform" action="#">
           <div class="form-title"><h3>Try Your <span>free</span> Trial Today</h3></div>
           <div class="form-main">
             <div class="form-group">
@@ -124,6 +120,11 @@
       <div class="features-wrap">
         <article class="feature-columns feature-columns-1">
           <div class="modal">
+            <div class="close-modal">
+              <span>
+                <img src="" alt="">
+              </span>
+            </div>
             <div class="showed-for-tab1">
               <video class="video-tab1" controls>
                 <source src="video/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
@@ -136,7 +137,7 @@
             <a href="#"><div class="tab tab3">CLICK IT! CLICK!</div></a>
           </nav>
           <div class="feature-text feature-text-left">
-            <h4 class="h4-tabs">Tabs with soft transitioning effect</h4>
+            <h4 class="h4-tabs">Tabs blow ARTICLE</h4>
             <p class="p-first">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
               bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
               justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
@@ -375,18 +376,18 @@
           </div>
           <div class="form-bottom">
             <div class="form-bottom-flex">
-              <form id="main-form" class="send-form" action="">
+              <form id="main-form" class="send-form" action="ajax.php" method="POST">
                 <fieldset class="form-area">
                   <div class="fieldset-div">
                     <div class="left-inputs">
                       <div class="form-name">
-                        <input id="idName" type="text" placeholder="Name">
+                        <input id="idName" name="idName" type="text" placeholder="Name">
                       </div>
                       <div class="form-email">
-                        <input id="idEmail" type="email" placeholder="Email">
+                        <input id="idEmail" name="" type="email" placeholder="Email">
                       </div>
                       <div class="form-subject">
-                        <input id="idSubject" type="text" placeholder="Subject">
+                        <input id="idSubject" name="" type="text" placeholder="Subject">
                       </div>
                     </div>
                     <div class="right-inputs">

@@ -1,7 +1,13 @@
 
 // HAMBURGER MENU
-$('.hamburger-click').on('click', function() {
+$('.hamburger').on('click', function() {
     $('.menu').slideToggle();
+});
+
+$('.menu').on('click', function () {
+  if(this.style.display == 'block') {
+    $('.menu').slideToggle();
+  }
 });
 
 // FEATURE PRICING ANIMATION
@@ -32,7 +38,8 @@ $('.anim-price3').hover(
 
 // HEADER FORM VALIDATION
 
-var username = document.forms['hform']['username'],
+var formHeader = document.querySelector('.header-form'),
+    username = document.forms['hform']['username'],
     email = document.forms['hform']['email'],
     password = document.forms['hform']['password'];
 
@@ -40,25 +47,28 @@ var usernameError = document.querySelector('#username-error'),
     emailError = document.querySelector('#email-error'),
     passwordError = document.querySelector('#password-error');
 
+formHeader.addEventListener('submit', Validate, false);
 username.addEventListener('blur', nameVerify, true);
 email.addEventListener('blur', emailVerify, true);
 password.addEventListener('blur', passwordVerify, true);
 
-function Validate() {
+function Validate(e) {
+
+  e.preventDefault();
     if(username.value == '') {
         usernameError.textContent = '* Podaj imię';
         username.focus();
-        return false;
+        return void 0;
     }
     if(email.value == '') {
         emailError.textContent = "* Podaj poprawny adres e-mail";
         email.focus();
-        return false;
+        return void 0;
     }
     if(password.value == '') {
         passwordError.textContent = "* Podaj hasło";
         password.focus();
-        return false;
+        return void 0;
     }
 }
 
@@ -82,6 +92,23 @@ function passwordVerify() {
         return true;
     }
 }
+
+// AJAX FORM
+var xhr = new XMLHttpRequest(),
+  data = FormData();
+
+xhr.open('POST', 'ajax.php', true);
+
+xhr.onreadystatechange(function (e) {
+  if(this.readyState == 4 && this.statusCode == 200) {
+    console.log(e);
+  }
+});
+
+data.append()
+
+xhr.send();
+
 
 // TAB SHOWING TAB EFFECTS
 const tab1 = document.querySelector('.tab1'),
