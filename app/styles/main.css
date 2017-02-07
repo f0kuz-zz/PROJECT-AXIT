@@ -460,15 +460,18 @@ header {
   align-items: center;
   height: 594px;
   padding: 0 150px; }
+  .feature-columns:first-child {
+    padding: 0; }
   .feature-columns:nth-child(odd) {
     background: #f5f5f5; }
 
 .feature-tab {
   display: flex;
   flex-direction: column;
-  width: 110px;
+  width: 180px;
   height: 332px;
   margin-right: 8%;
+  padding-left: 150px;
   text-align: center; }
   .feature-tab .tab {
     height: 110px;
@@ -476,10 +479,36 @@ header {
     background: #333;
     color: #fff;
     font-family: "Open Sans", sans-serif;
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: 0.8rem; }
   .feature-tab a {
     border-top: 1px solid #f5f5f5;
     text-decoration: none; }
+
+.feature-columns-1 {
+  position: relative;
+  display: flex; }
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: none; }
+
+.showed-for-tab1 {
+  position: absolute;
+  height: 594px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.video-tab1 {
+  height: 514px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
 
 .feature-text {
   flex: 1; }
@@ -528,22 +557,59 @@ header {
   .feature-image .figure-start {
     margin: 0; }
 
+.feature-image-1 {
+  padding-right: 150px; }
+
 @media (min-width: 1281px) and (max-width: 1600px) {
   .feature-columns {
-    padding: 0 50px; } }
+    padding: 0 25px; }
+    .feature-columns:first-child {
+      padding: 0; }
+    .feature-columns .feature-tab {
+      padding-left: 25px; }
+    .feature-columns .feature-image-1 {
+      padding-right: 25px; } }
 @media (min-width: 1101px) and (max-width: 1280px) {
   .feature-columns {
-    padding: 0 50px; } }
+    padding: 0 25px; }
+    .feature-columns:first-child {
+      position: relative; }
+    .feature-columns .feature-tab {
+      padding-left: 25px; }
+    .feature-columns .feature-image-1 {
+      padding-right: 25px; } }
 @media (min-width: 1081px) and (max-width: 1100px) {
   .feature-columns {
     padding: 0 25px; }
+    .feature-columns:first-child {
+      padding: 0; }
+    .feature-columns .feature-tab {
+      padding-left: 25px; }
+    .feature-columns .feature-image-1 {
+      padding-right: 25px; }
+
+  .modal {
+    margin-left: 0; }
 
   p {
     font-size: 1.05em; } }
 @media (min-width: 961px) and (max-width: 1080px) {
   .feature-columns {
     flex-direction: column-reverse;
-    padding: 0 25px; }
+    padding: 0 50px;
+    align-items: flex-start; }
+    .feature-columns:first-child {
+      padding: 0 50px; }
+    .feature-columns .feature-tab {
+      padding-left: 0; }
+    .feature-columns .feature-image-1 {
+      padding-right: 0; }
+
+  .modal {
+    left: 0; }
+
+  .video-tab1 {
+    height: 474px; }
 
   h4 {
     margin: 0; }
@@ -569,27 +635,30 @@ header {
     top: 140px; }
 
   .feature-text-left {
+    padding-top: 25px;
     order: 2; }
 
-  .feature-columns-1 {
+  .feature-columns .feature-columns-1 {
     align-items: stretch;
     padding-top: 37px;
-    padding-bottom: 37px;
     box-sizing: border-box; }
-    .feature-columns-1 .feature-tab {
-      flex-direction: row;
-      order: 1;
-      width: 300px;
-      position: relative;
-      top: 80px; }
-      .feature-columns-1 .feature-tab a {
-        width: 100%;
-        border-left: 1px solid #f5f5f5; }
-      .feature-columns-1 .feature-tab .tab {
-        height: 80px;
-        line-height: 80px; }
-    .feature-columns-1 .feature-image-1 {
-      align-self: flex-end; }
+
+  .feature-tab {
+    flex-direction: row;
+    order: 1;
+    width: 300px;
+    position: relative;
+    top: 80px; }
+    .feature-tab a {
+      width: 100%;
+      border-left: 1px solid #f5f5f5; }
+    .feature-tab .tab {
+      height: 80px;
+      line-height: 80px; }
+
+  .feature-image-1 {
+    align-self: flex-end;
+    padding-bottom: 37px; }
 
   .feature-columns-2 .feature-image-2 {
     margin-left: 50%;
@@ -603,6 +672,25 @@ header {
   .feature-columns {
     flex-direction: column-reverse;
     padding: 0 25px; }
+    .feature-columns:first-child {
+      padding: 0 25px; }
+
+  .modal {
+    margin-left: 0; }
+
+  .showed-for-tab1 {
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+
+  .video-tab1 {
+    height: auto;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 100%; }
 
   h4 {
     margin: 0; }
@@ -635,11 +723,15 @@ header {
       width: 100%;
       height: 100%; }
 
+  .feature-image {
+    padding-right: 0; }
+
   .feature-columns-1 .feature-tab {
     position: relative;
     flex-direction: row;
     width: 300px;
     height: 80px;
+    padding-left: 0;
     top: -140px; } }
   @media screen and (min-width: 721px) and (max-width: 960px) and (max-width: 860px) {
     .feature-columns-1 .feature-tab {
@@ -682,12 +774,23 @@ header {
   .feature-columns {
     flex-direction: column-reverse;
     padding: 0 25px; }
+    .feature-columns:first-child {
+      padding: 0 25px; }
 
   h4 {
     margin: 0; }
 
   p {
     font-size: 1.05em; }
+
+  .showed-for-tab1 {
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%); }
+
+  .video-tab1 {
+    width: 100%;
+    height: auto; }
 
   .text-title-box {
     display: flex;
@@ -721,8 +824,9 @@ header {
     flex-direction: row;
     width: 100%;
     height: 80px;
-    top: -70px;
-    margin-right: 0; }
+    margin-right: 0;
+    padding-left: 0;
+    top: -70px; }
     .feature-columns-1 .feature-tab a {
       width: 100%;
       border-left: 1px solid #f5f5f5;
@@ -767,7 +871,13 @@ header {
       display: none; }
 
   .feature-columns-1 {
-    padding-top: 20px; } }
+    padding-top: 20px; }
+
+  .feature-columns-1, .feature-columns-2, .feature-columns-3 {
+    height: 494px; }
+
+  .pricing-top {
+    padding: 0 25px; } }
 .feature-why-flex {
   display: flex;
   justify-content: center;
@@ -851,7 +961,7 @@ header {
   align-content: center;
   height: 884px;
   padding: 0 145px;
-  background: #fff; }
+  background: #f5f5f5; }
 
 .pricing-top-flex {
   display: flex;
@@ -898,7 +1008,7 @@ header {
       font-weight: 600;
       color: #fff; }
       .pricing-column .pricing-column-flex .pricing-level p {
-        color: #fff; }
+        color: cadetblue; }
     .pricing-column .pricing-column-flex .pricing-price {
       display: flex;
       flex-direction: column;
