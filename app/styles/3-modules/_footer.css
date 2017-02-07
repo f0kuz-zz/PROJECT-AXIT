@@ -1,0 +1,29 @@
+footer {
+  position: relative;
+  height: 93px;
+  width: 100%;
+  background: #222; }
+
+.footer-icons {
+  display: flex;
+  justify-content: center; }
+  .footer-icons ul {
+    -webkit-padding-start: 0; }
+    .footer-icons ul li {
+      display: inline-block;
+      padding: 0 30px; }
+
+p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #d6d6d6; }
+
+@media (max-width: 521px) {
+  .footer-icons ul li {
+    padding: 0 10px; } }
+
+/*# sourceMappingURL=_footer.csss.map */

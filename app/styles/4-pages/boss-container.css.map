@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,eAAe;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,CAAC;;AAGX,UAAU;EACR,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI",
-"sources": ["boss-container.sass"],
-"names": [],
-"file": "boss-container.css"
-}
