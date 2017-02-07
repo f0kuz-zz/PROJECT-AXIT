@@ -95,19 +95,37 @@ function passwordVerify() {
 
 // AJAX FORM
 var xhr = new XMLHttpRequest(),
-  data = FormData();
+    data = new FormData();
 
 xhr.open('POST', 'ajax.php', true);
 
-xhr.onreadystatechange(function (e) {
-  if(this.readyState == 4 && this.statusCode == 200) {
-    console.log(e);
+xhr.onreadystatechange = function (e) {
+  if(this.readyState == 4 && this.status == 200) {
+    console.log(this.response);
   }
-});
+};
 
-data.append()
+var idName = document.querySelector('#idName'),
+    idEmail = document.querySelector('#idEmail'),
+    idSubject = document.querySelector('#idSubject'),
+    idMessage = document.querySelector('#idMessage'),
 
-xhr.send();
+    contactName = document.forms['main-contact-form']['contactName'],
+    contactEmail = document.forms['main-contact-form']['contactEmail'],
+    contactSubject = document.forms['main-contact-form']['contactSubject'],
+    contactMessage = document.forms['main-contact-form']['contactMessage'];
+
+data.append(contactName, idName);
+data.append(contactEmail, idEmail);
+data.append(contactSubject, idSubject);
+data.append(contactMessage, idMessage);
+
+// data.append('contactName', idName.value);
+// data.append('contactEmail', idEmail.value);
+// data.append('contactSubject', idSubject.value);
+// data.append('contactMessage', idMessage.value);
+
+// xhr.send();
 
 
 // TAB SHOWING TAB EFFECTS

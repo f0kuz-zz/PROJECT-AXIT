@@ -3,7 +3,7 @@
   flex-direction: column
   align-items: center
   justify-content: center
-  padding: 40px 0 0
+  height: 620px
 
 .form-top-flex
   display: flex
@@ -30,15 +30,15 @@
     height: 2px
     background: $orange
 
-.form-bottom
+.form-contact-wrapper
   display: flex
   flex-direction: column
 
-.send-form
+.contact-form
   width: 1125px
   height: 240px
 
-.form-area
+.contact-form-area
   padding: 0
   border: 0
 
@@ -47,7 +47,7 @@
     justify-content: space-between
     height: 220px
 
-    .left-inputs, .right-inputs
+    .contact-inputs-left, .contact-inputs-right
       width: 45%
 
     input[type=text], input[type=email]
@@ -64,7 +64,7 @@
     textarea
       width: 100%
       height: 168px
-      padding: 34px 15px 15px 30px
+      padding: 23px 15px 15px 30px
       border: 0
       border-bottom: 1px solid $lightgrey
       font-family: $opensans
@@ -76,8 +76,10 @@
 .bottom-button-wrapper
   display: flex
   justify-content: center
-  align-items: center
-  height: 170px
+  align-items: flex-end
+
+  @media (min-width: 1281px)
+    margin-top: 30px
 
   .send-button
     width: 146px
@@ -103,23 +105,27 @@
     h3
       margin-top: 0
 
-  .send-form
+  .contact-form
     width: 670px
     height: 410px
     margin-top: 36px
 
-  .form-area
+  .contact-form-area
 
     .fieldset-div
       flex-direction: column
 
-      .left-inputs, .right-inputs
+      .contact-inputs-left, .contact-inputs-right
         align-self: center
         width: 440px
 
       textarea
         padding-left: 15px
         height: 108px
+
+  .bottom-button-wrapper
+    margin-left: 30px
+    height: 233px
 
 //  --------------------------------------------
 
@@ -135,19 +141,19 @@
     h3
       margin-top: 0
 
-  .form-bottom
+  .form-contact-wrapper
     width: 100%
 
-  .send-form
+  .contact-form
     width: 100%
     height: 410px
 
-  .form-area
+  .contact-form-area
 
     .fieldset-div
       flex-direction: column
 
-      .left-inputs, .right-inputs
+      .contact-inputs-left, .contact-inputs-right
         align-self: center
         width: 100%
 
@@ -181,19 +187,19 @@
     h3
       margin-top: 0
 
-  .form-bottom
+  .form-contact-wrapper
     width: 100%
 
-  .send-form
+  .contact-form
     width: 100%
     height: 410px
 
-  .form-area
+  .contact-form-area
 
     .fieldset-div
       flex-direction: column
 
-      .left-inputs, .right-inputs
+      .contact-inputs-left, .contact-inputs-right
         align-self: center
         width: 100%
 
@@ -209,7 +215,11 @@
 
   .bottom-button-wrapper
     align-items: flex-end
-    height: 116px
+    height: 272px
+    margin-left: 0
+
+    @media (min-width: 661px) and (max-width: 720px)
+      height: 233px
 
     .send-button
       width: 90%

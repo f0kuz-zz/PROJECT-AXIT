@@ -374,33 +374,33 @@
             <div class="feature-divider"></div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-          <div class="form-bottom">
+          <div class="form-contact-wrapper">
             <div class="form-bottom-flex">
-              <form id="main-form" class="send-form" action="ajax.php" method="POST">
-                <fieldset class="form-area">
+              <form id="id-contact-form" class="contact-form" name="main-contact-form" action="ajax.php" method="POST">
+                <fieldset class="contact-form-area">
                   <div class="fieldset-div">
-                    <div class="left-inputs">
+                    <div class="contact-inputs-left">
                       <div class="form-name">
-                        <input id="idName" name="idName" type="text" placeholder="Name">
+                        <input id="idName" name="contactName" type="text" placeholder="Name">
                       </div>
                       <div class="form-email">
-                        <input id="idEmail" name="" type="email" placeholder="Email">
+                        <input id="idEmail" name="contactEmail" type="email" placeholder="Email">
                       </div>
                       <div class="form-subject">
-                        <input id="idSubject" name="" type="text" placeholder="Subject">
+                        <input id="idSubject" name="contactSubject" type="text" placeholder="Subject">
                       </div>
                     </div>
-                    <div class="right-inputs">
+                    <div class="contact-inputs-right">
                       <div class="form-message">
-                        <textarea id="idMessage" placeholder="Message"></textarea>
+                        <textarea id="idMessage" name="contactMessage" placeholder="Message"></textarea>
                       </div>
                     </div>
                   </div>
+                  <div class="bottom-button-wrapper">
+                    <input type="submit" class="send-button" value="Send Message">
+                  </div>
                 </fieldset>
               </form>
-              <div class="bottom-button-wrapper">
-                <button class="send-button">Send Message</button>
-              </div>
             </div>
           </div>
         </article>
