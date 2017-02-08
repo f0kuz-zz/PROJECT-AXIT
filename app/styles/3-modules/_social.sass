@@ -39,6 +39,7 @@
 
   .social-icon-_li
     filter: blur(2px)
+    transition: .1s filter ease-in
 
     &:hover
       filter: blur(0)
@@ -91,6 +92,9 @@
     .social-icon-_ul:first-child
       margin-left: 0
 
+    .social-icon-_li
+      transform: scale(.7)
+
 //  --------------------------------------------
 
 @media (max-width: 720px)
@@ -108,3 +112,6 @@
 
     .social-icon-_ul:first-child
       margin-left: 0
+
+    .social-icon-_li
+      transform: scale(.7)
