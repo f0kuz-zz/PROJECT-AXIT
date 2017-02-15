@@ -1,4 +1,4 @@
-(function () {
+// (function () {
     "use strict";
 
 // HAMBURGER MENU
@@ -100,32 +100,15 @@
     xhr.open('POST', 'ajax.php', true);
 
     xhr.onreadystatechange = function (e) {
-        if(this.readyState == 4 && this.status == 200) {
+        if(this.readyState === 4 && this.status === 200) {
             console.log(this.response);
         }
     };
 
-    var idName = document.querySelector('#idName'),
-        idEmail = document.querySelector('#idEmail'),
-        idSubject = document.querySelector('#idSubject'),
-        idMessage = document.querySelector('#idMessage'),
-
-        contactName = document.forms['main-contact-form']['contactName'],
-        contactEmail = document.forms['main-contact-form']['contactEmail'],
-        contactSubject = document.forms['main-contact-form']['contactSubject'],
-        contactMessage = document.forms['main-contact-form']['contactMessage'];
-
-    data.append(contactName, idName);
-    data.append(contactEmail, idEmail);
-    data.append(contactSubject, idSubject);
-    data.append(contactMessage, idMessage);
-
-// data.append('contactName', idName.value);
-// data.append('contactEmail', idEmail.value);
-// data.append('contactSubject', idSubject.value);
-// data.append('contactMessage', idMessage.value);
-
-// xhr.send();
+    data.append('contactName', '');
+    data.append('contactEmail', '');
+    data.append('contactSubject', '');
+    data.append('contactMessage', '');
 
 // TAB SHOWING EFFECTS
 
@@ -185,5 +168,5 @@
 
     window.addEventListener('scroll', showScrollTopButton, false);
     scrollTopBtn.addEventListener('click', scrollToTop, false);
-})();
+// })();
 
